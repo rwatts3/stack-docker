@@ -7,7 +7,7 @@ fi
 
 # Determine if x-pack is enabled
 echo "Determining if x-pack is installed..."
-if [[ -d /usr/share/elasticsearch/bin/x-pack ]]; then
+# if [[ -d /usr/share/elasticsearch/bin/x-pack ]]; then
     if [[ -n "$ELASTIC_PASSWORD" ]]; then
 
         echo "=== CREATE Keystore ==="
@@ -61,4 +61,4 @@ if [[ -d /usr/share/elasticsearch/bin/x-pack ]]; then
         echo "Move elasticsearch certs to elasticsearch config dir..."
         mv /config/ssl/docker-cluster/elasticsearch/* /config/elasticsearch/
     fi
-fi
+# fi
